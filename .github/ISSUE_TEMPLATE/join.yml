@@ -1,0 +1,75 @@
+name: "👋 Join the lab"
+description: "Tell us about yourself and how you want to collaborate"
+title: "[Join] <your name / handle>"
+labels: ["join"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in **Boy Offi9 Inc**. Fill this in and we'll get back to you.
+        No resume required — just be honest about what you do and what you want to build.
+
+  - type: input
+    id: name
+    attributes:
+      label: "Name / handle"
+      description: "What should we call you? GitHub handle plus whatever you go by."
+      placeholder: "e.g. @janedoe — Jane"
+    validations:
+      required: true
+
+  - type: textarea
+    id: about
+    attributes:
+      label: "About you"
+      description: "Who are you, what do you work with, what have you built? Links to repos, projects, or profiles count for more than adjectives."
+      placeholder: "I'm a backend dev focused on Go and Kubernetes. I maintain X and built Y..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: interest
+    attributes:
+      label: "Where do you fit?"
+      description: "Pick the closest — or pick Other and explain."
+      multiple: true
+      options:
+        - Developer tools (CLIs, libraries, SDKs)
+        - Android / mobile systems
+        - Reverse engineering & static analysis
+        - Termux / proot / device automation
+        - Backend / infrastructure
+        - Frontend / UI
+        - Design (UI/UX, graphics)
+        - Docs / technical writing
+        - Other (explain below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: pitch
+    attributes:
+      label: "What do you want to work on?"
+      description: "An existing repo you'd like to contribute to, or a new idea for the lab. One or two sentences is fine."
+      placeholder: "I'd like to help build out ... / I have an idea for ..."
+    validations:
+      required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: "Best way to reach you"
+      description: "Email, Telegram, Discord — whatever you actually check. GitHub mentions work too."
+      placeholder: "you@example.com"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: "Ground rules"
+      options:
+        - label: "I've read the repo READMEs of anything I want to contribute to"
+          required: true
+        - label: "I understand contributions are voluntary and credited in the repos I touch"
+          required: true
