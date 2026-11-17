@@ -1,4 +1,4 @@
-# Boy Offi9 Inc.
+# Boy Offi9 Inc
 
 <p align="center">
   <img src="https://img.shields.io/badge/Independent-Software%20Lab-111111?style=for-the-badge&logo=github&logoColor=white" />
@@ -8,49 +8,51 @@
 </p>
 
 <p align="center">
-  <strong>Building tools, systems, APIs, and experiments.</strong>
+  <strong>We build the tools we wish existed.</strong>
 </p>
 
 ---
 
-## ⚙️ What We Build
+## What this is
 
-Boy Offi9 Inc. is an software lab focused on building practical software, developer tools, and experimental systems.
+Boy Offi9 Inc is an independent software lab. The work runs from focused developer tooling to Android systems to reverse-engineering infrastructure — built to be used, not demoed. Everything public here is maintained; everything half-finished stays private until it earns its way out.
 
-Our work spans:
+## Flagship
 
-- 🧩 Developer tools
-- 📱 Android & mobile systems
-- 🌐 APIs & backend services
-- 🤖 Automation & tooling
-- 🔬 Reverse engineering & system research
-- 🧪 Experimental software
+### [hexforge-gateway](https://github.com/boy-offi9-inc/hexforge-gateway) · TypeScript · 13 stars
 
-## 🚀 Projects
+Self-hosted reverse-engineering workspace API. One gateway orchestrates jadx, apktool, APKiD, frida and adb behind a typed MCP and REST surface, then keeps what it learns in a typed knowledge graph with findings and a verifier. Ten built-in agents, nine AI providers, a pinned Docker runtime, and a redaction model that never lets a secret leave the box. CodeQL clean, 615 tests.
 
-From focused utilities to larger experimental systems, our repositories
-represent what we're currently building and exploring.
+### [apk-unravel](https://github.com/boy-offi9-inc/apk-unravel) · JavaScript · 4 stars
 
-## 🤝 Contributing
+Decompile any APK into a single readable report: permissions tiered by risk, exported components, deep links with a check on whether the target actually handles them, native ABI and 16 KB page-size checks, and a URL/secret scan with custom rules. Runs on Termux as happily as on a laptop. `npm i -g @boy-offi9-inc/apk-unravel`
 
-Issues, ideas, discussions, and pull requests are welcome.
+### [matrix-rain-view](https://github.com/boy-offi9-inc/matrix-rain-view) · Kotlin · 8 stars
 
-Each repository may have its own setup and contribution guidelines, so check the project's README before getting started.
+Matrix digital rain for Android, drawn live on a Canvas — a standard `View` and a Jetpack Compose composable. Runtime-configurable, touch-reactive, delta-time smooth across 60 and 120 Hz, and zero asset files in your APK. The [demo app](https://github.com/boy-offi9-inc/matrix-rain-demo) wires every property to a live control.
 
----
+## The rest of the bench
 
-### 🛠️ Technologies
+| Project | What it does | Stack |
+|---|---|---|
+| [reqkit](https://github.com/boy-offi9-inc/reqkit) | Small, composable HTTP helpers — retry with backoff, Retry-After aware | JavaScript |
+| [Playfold](https://github.com/boy-offi9-inc/Playfold) | Tiny, framework-agnostic SDK for embedding media players | TypeScript |
+| [Tidepull](https://github.com/boy-offi9-inc/Tidepull) | Minimal, from-scratch media downloader — extractors, no bloat | TypeScript |
+| [btch-downloader-api](https://github.com/boy-offi9-inc/btch-downloader-api) | No-auth REST API over btch-downloader, sixteen platforms | JavaScript |
+| [scifi-ui-kit](https://github.com/boy-offi9-inc/scifi-ui-kit) | Sci-fi HUD components for Android: chamfered panels, glitch text | Kotlin |
+| [isomorphic-unzip](https://github.com/boy-offi9-inc/isomorphic-unzip) | Maintained drop-in replacement for the abandoned original | JavaScript |
 
-<p>
-  <img src="https://img.shields.io/badge/JavaScript-111111?style=flat-square&logo=javascript&logoColor=F7DF1E" />
-  <img src="https://img.shields.io/badge/TypeScript-111111?style=flat-square&logo=typescript&logoColor=3178C6" />
-  <img src="https://img.shields.io/badge/Kotlin-111111?style=flat-square&logo=kotlin&logoColor=7F52FF" />
-  <img src="https://img.shields.io/badge/Java-111111?style=flat-square&logo=openjdk&logoColor=ED8B00" />
-  <img src="https://img.shields.io/badge/Node.js-111111?style=flat-square&logo=node.js&logoColor=5FA04E" />
-  <img src="https://img.shields.io/badge/Android-111111?style=flat-square&logo=android&logoColor=3DDC84" />
-  <img src="https://img.shields.io/badge/Linux-111111?style=flat-square&logo=linux&logoColor=FCC624" />
-  <img src="https://img.shields.io/badge/Git-111111?style=flat-square&logo=git&logoColor=F05032" />
-</p>
+## How the work splits
+
+**Developer tools** get built when something common is more annoying than it should be — that is where reqkit, Playfold and apk-unravel came from. **Android systems** covers libraries like matrix-rain-view and scifi-ui-kit, plus the Termux and proot automation that mostly lives in private repos. **Reverse engineering** is the deepest thread: hexforge-gateway exists because static analysis of an APK should produce a report you can read, not a folder you have to spelunk.
+
+## Stack
+
+TypeScript · Kotlin · Go · JavaScript · Node.js · Android · Linux
+
+## Contributing
+
+Issues, ideas and pull requests are welcome on any public repo. Each project's README carries its own setup instructions. The house style: small focused commits, tests for behaviour, no surprises in a diff.
 
 ---
 
